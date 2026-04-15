@@ -1,0 +1,50 @@
+config_version = "0"
+
+exclude_patterns = [
+  "**/__pycache__/**",
+  "**/*.pyc",
+  "**/build/**",
+  "**/dist/**",
+  "**/*.egg-info/**",
+]
+
+test_patterns = [
+  "**/tests/**",
+  "**/*_test.py",
+  "**/test_*.py",
+]
+
+[smells]
+mode = "comment"
+
+[[source]]
+name = "default"
+default = true
+
+[[plugin]]
+name = "ruff"
+mode = "comment"
+
+[[plugin]]
+name = "trufflehog"
+mode = "block"
+
+[[plugin]]
+name = "zizmor"
+mode = "block"
+
+[[plugin]]
+name = "osv-scanner"
+mode = "block"
+
+[[plugin]]
+name = "markdownlint"
+mode = "comment"
+
+[[plugin]]
+name = "actionlint"
+mode = "comment"
+
+[[plugin]]
+name = "yamllint"
+mode = "comment"
